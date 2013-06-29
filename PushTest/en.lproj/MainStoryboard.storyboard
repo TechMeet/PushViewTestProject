@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E3067" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="j05-zH-8hn">
+    <dependencies>
+        <deployment version="1280" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller - Item-->
+        <scene sceneID="fS0-we-DLh">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Bch-6z-PC0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="VxU-JL-qfC"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jKX-so-vns">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="v2r-ds-GaY" kind="relationship" relationship="rootViewController" id="kaj-Kx-RB6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Esg-yA-386" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="261" y="549"/>
+        </scene>
+        <!--View Controller - 画面1-->
+        <scene sceneID="tEW-hC-0ed">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YF2-t1-dDU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="v2r-ds-GaY" customClass="PTViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oZp-Gh-Xx4">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="moL-af-NdJ">
+                                <rect key="frame" x="94" y="207" width="133" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="画面2(Native)へ">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="KtC-y5-oiK" kind="push" id="j2b-gw-B4M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="画面1" id="EUC-gj-idt"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="820" y="549"/>
+        </scene>
+        <!--Navigation Controller - Item-->
+        <scene sceneID="bN3-4N-6Nz">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="kJs-fC-gJJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="eh2-H3-rfk"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oMX-rY-oJS">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="tTN-rw-Siz" kind="relationship" relationship="rootViewController" id="oMM-Hf-xTk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sof-p9-8gz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="261" y="-414"/>
+        </scene>
+        <!--Web View1 Controller - Web1画面-->
+        <scene sceneID="hRk-07-jYq">
+            <objects>
+                <viewController id="tTN-rw-Siz" customClass="WebView1Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Rl-RQ-F8f">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="wQf-x4-6ja">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="tTN-rw-Siz" id="7Wo-kg-mHO"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="D35-CH-oH4"/>
+                    <navigationItem key="navigationItem" title="Web1画面" id="YU8-Cd-6Vy"/>
+                    <connections>
+                        <outlet property="webView" destination="wQf-x4-6ja" id="qGD-of-azX"/>
+                        <segue destination="sjV-bM-al0" kind="push" identifier="push4FromWeb1" id="fkF-PW-q4h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DA6-F8-4ce" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="812" y="-414"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="u9l-v3-l5l">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="j05-zH-8hn" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="aiS-of-4Yr">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Bch-6z-PC0" kind="relationship" relationship="viewControllers" id="5KV-ap-AaR"/>
+                        <segue destination="kJs-fC-gJJ" kind="relationship" relationship="viewControllers" id="h0c-6J-wW5"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6dI-TR-uDs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-446" y="-29"/>
+        </scene>
+        <!--Sample3 View Controller - 画面3-->
+        <scene sceneID="Lgf-cn-Mmf">
+            <objects>
+                <viewController id="afK-gT-JU8" customClass="Sample3ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Su0-Vn-4Vw">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YKJ-3v-wD4">
+                                <rect key="frame" x="94" y="203" width="133" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="画面4(Native)へ">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="sjV-bM-al0" kind="push" id="Rck-Xb-4WU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="画面3" id="uaj-3p-cBP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lyo-tf-uMI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1984" y="549"/>
+        </scene>
+        <!--View Controller - 画面2-->
+        <scene sceneID="4LI-9l-lR1">
+            <objects>
+                <viewController id="KtC-y5-oiK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WyV-Eg-U1F">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="754-1p-M5N">
+                                <rect key="frame" x="99" y="207" width="140" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="画面３(Native)へ">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="afK-gT-JU8" kind="push" id="iiW-uW-WAy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="画面2" id="zSl-ZQ-PGt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d90-qu-mii" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1404" y="549"/>
+        </scene>
+        <!--Sample4 View Controller - 画面4-->
+        <scene sceneID="0qD-wO-tNT">
+            <objects>
+                <viewController id="sjV-bM-al0" customClass="Sample4ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Ni-hc-jkq">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vaS-k4-AA9">
+                                <rect key="frame" x="19" y="117" width="90" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="画面1に戻る">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="back1Action:" destination="sjV-bM-al0" eventType="touchUpInside" id="Zzk-JB-umC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="acO-ik-Sj6">
+                                <rect key="frame" x="117" y="117" width="88" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="画面2に戻る">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="back2Action:" destination="sjV-bM-al0" eventType="touchUpInside" id="dGq-OR-1xr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pO6-lr-gcP">
+                                <rect key="frame" x="213" y="117" width="88" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="画面3へ戻る">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="back3Action:" destination="sjV-bM-al0" eventType="touchUpInside" id="Vfp-1S-k2Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yv9-1E-bEZ">
+                                <rect key="frame" x="48" y="168" width="108" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="画面5を表示">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="push5Action:" destination="sjV-bM-al0" eventType="touchUpInside" id="Vp1-K9-30q"/>
+                                </connections>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="4Y5-Kf-Q2f">
+                                <rect key="frame" x="0.0" y="411" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="メッセージ切り替え" id="33T-ZN-Ine">
+                                        <connections>
+                                            <action selector="switchDisplayAction:" destination="sjV-bM-al0" id="Kom-0D-koT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uiv-dD-6G9">
+                                <rect key="frame" x="164" y="168" width="108" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="web2を表示">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showWebViewAction:" destination="sjV-bM-al0" eventType="touchUpInside" id="eaJ-VX-HxW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="[画面切り替え]ボタンをクリックでメッセージが切り替わります" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cbY-ds-ueY">
+                                <rect key="frame" x="20" y="32" width="291" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="画面4" id="Arx-nd-OeA"/>
+                    <connections>
+                        <outlet property="messageLabel" destination="cbY-ds-ueY" id="Aja-ni-K1U"/>
+                        <segue destination="ufa-tx-pOM" kind="push" identifier="push5" id="omN-Or-bJY"/>
+                        <segue destination="Y07-ng-I9s" kind="push" identifier="pushWeb2FromNative" id="BSk-xr-Ah7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b1c-W2-39o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2495" y="-414"/>
+        </scene>
+        <!--Sample5 View Controller - 画面5-->
+        <scene sceneID="mcX-Xa-1kj">
+            <objects>
+                <viewController id="ufa-tx-pOM" customClass="Sample5ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SoD-hC-Vkb">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="画面5" id="ybC-bK-5Kn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DEw-ws-jGj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3045" y="530"/>
+        </scene>
+        <!--Web View Controller - Item 1-->
+        <scene sceneID="tE1-co-9iX">
+            <objects>
+                <viewController id="Y07-ng-I9s" customClass="WebViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8g9-Kv-8qu">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="5SX-Vk-4I9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y07-ng-I9s" id="G5v-aT-6YH"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="2HQ-hS-3DN"/>
+                    <navigationItem key="navigationItem" id="RhA-oW-TLc"/>
+                    <connections>
+                        <outlet property="webView" destination="5SX-Vk-4I9" id="twf-zl-9XX"/>
+                        <segue destination="sjV-bM-al0" kind="push" identifier="push4FromWeb2" id="hSo-ID-JNk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WdW-VM-f7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3259" y="-350"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="BaseWebViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseWebViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backBarButtonItemAction:"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="Sample3ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/Sample3ViewController.h"/>
+        </class>
+        <class className="Sample4ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/Sample4ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="back1Action:"/>
+                <relationship kind="action" name="back2Action:"/>
+                <relationship kind="action" name="back3Action:"/>
+                <relationship kind="action" name="push5Action:"/>
+                <relationship kind="action" name="showWebViewAction:"/>
+                <relationship kind="action" name="switchDisplayAction:"/>
+                <relationship kind="outlet" name="messageLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="Sample5ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/Sample5ViewController.h"/>
+        </class>
+        <class className="WebView1Controller" superclassName="BaseWebViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebView1Controller.h"/>
+        </class>
+        <class className="WebViewController" superclassName="BaseWebViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backNativeButtonItemAction:"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Rck-Xb-4WU"/>
+    </inferredMetricsTieBreakers>
+</document>
